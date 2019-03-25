@@ -1,0 +1,40 @@
+.greyarrow {
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url('/assets/icon_dropdown.png') 97% / 6% no-repeat #eff1f5;
+
+}
+
+.invitation {
+  font-size: 14px;
+  border-radius: 20px;
+  background-color: #1f6efe;
+  cursor: pointer;
+  width: 136px;
+  height: 40px;
+  float: right;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+:disabled.invitation {
+  opacity: 0.6;
+}
+
+.inputs select {
+  display: inline-block;
+  width: 99.8%;
+  height: 48px;
+  padding: 12px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  border-radius: 3px !important;
+  background-color: #eff1f5;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url('/assets/icon_dropdown.png') 97% / 6% no-repeat #eff1f5;
+}

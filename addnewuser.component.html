@@ -1,0 +1,84 @@
+<div [formGroup]='formAddNewUser' class='form-group inputs'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-sm-3 col-md-3 col-lg-3 col-xl-3 '></div>
+      <div class='col-lg-6 col-xl-6 col-md-6 col-sm-6 '>
+        <div class='form-box' style='margin-top:255px;width: auto !important;border: 16px solid #9ea8b9;border-radius: 32px;'>
+          <div class='row'>
+            <div class='col-sm-12 col-md-12 col-lg-12 col-xl-12'>
+              <div routerLink='/client/settings/myaccount' routerLinkActive='active' style='float:right;cursor:pointer;margin-top: -32px;font-size: 48px;color: #7c879b;outline:none;
+          '>&times;</div>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-sm-12 col-md-12 col-lg-12 col-xl-12' style='font-size: 24px;font-weight: bold;margin-top: -27px;margin-bottom: 23px;'>Add
+              New User</div>
+          </div>
+          <div class='row'>
+            <div class='col-sm-6 col-md-6 col-lg-6 col-xl-6'>
+              <label>First Name</label><br />
+              <input formControlName='firstname' placeholder='First Name' name='firstname' id='firstname' />
+              <div *ngIf="formAddNewUser.controls.firstname.touched">
+                <small *ngIf="formAddNewUser.controls.firstname.invalid" class="text-danger error-validation" style="position: relative;float: right;">
+                  First Name is required
+                </small>
+              </div>
+            </div>
+            <div class='col-sm-6 col-md-6 col-lg-6 col-xl-6'>
+              <label>Last Name</label><br />
+              <input formControlName='lastname' placeholder='Last Name' name='lastname' id='lastname' />
+              <div *ngIf="formAddNewUser.controls.lastname.touched">
+                <small *ngIf="formAddNewUser.controls.lastname.invalid" class="text-danger error-validation" style="position: relative;float: right;">
+                  Last Name is required
+                </small>
+              </div>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-sm-12 col-md-12 col-lg-12 col-xl-12'>
+              <label>Email Address (Vetty will send an invitation to this address)</label><br />
+              <input formControlName='email' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder='name@domain.com '
+                name='email' id='email' type="email" [email]="true" />
+
+              <div *ngIf="formAddNewUser.controls.email.touched">
+                <small *ngIf="formAddNewUser.controls.email.invalid" class="text-danger error-validation" style="position: relative;float: right;">
+                  Please enter a valid email address
+                </small>
+              </div>
+              <div *ngIf="formAddNewUser.controls.email.touched"><small class="text-danger error-validation" style="position: relative;float: right;">{{emailerror}}</small></div>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-sm-12 col-md-12 col-lg-12 col-xl-12'>
+              <label>User Type</label><br />
+              <select formControlName="usertype" class="greyarroow">
+                <option></option>
+                <option>
+                  Standard
+                </option>
+                <option>
+                  Administrator
+                </option>
+              </select>
+              <div *ngIf="formAddNewUser.controls.usertype.touched">
+                <small *ngIf="formAddNewUser.controls.usertype.invalid" class="text-danger error-validation" style="position: relative;float: right;">
+                  User Type is required
+                </small>
+              </div>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-sm-3 col-md-3 col-lg-3 col-xl-3'></div>
+            <div class='col-sm-3 col-md-3 col-lg-3 col-xl-3'></div>
+            <div class='col-sm-3 col-md-3 col-lg-3 col-xl-3'></div>
+            <div class='col-sm-3 col-md-3 col-lg-3 col-xl-3'>
+              <button class="invitation" [disabled]="!formAddNewUser.valid" (click)="sendInvitation()">Send Invitation</button>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
