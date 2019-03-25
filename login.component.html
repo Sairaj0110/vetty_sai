@@ -1,0 +1,68 @@
+<!-- <div class="row my-3" [hidden]="">
+  <p class="text-info">Invitation link you have tried to sign up was already used to
+     create an Applicant account before. Please login below to continue.</p>
+</div> -->
+
+<app-applicant-top-header ></app-applicant-top-header>
+
+
+  <div class="login-header">
+  
+    <div class="container">
+      <div class="row">
+          <div class="col-sm-12 col-lg-12 col-md-12 col-xl-12">
+            <div class="Vetty-Profile"><i>Vetty Profile</i></div>
+            <div class="Your-Vetty-Profile-l"> Your Vetty Profile lets you share your background information safely and securely.
+              </div>
+          </div>
+      </div>
+     </div>
+  </div>
+  <div class="container" style="height:100%;">
+  <div class="login-box row" style="margin-bottom:100px;">
+    
+    <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
+    <div class="col-lg-6 col-xl-6 col-sm-6 col-md-6 login-box-col">
+      <div class="form-group inputs">
+        <label class="form-label Login-new" style="margin-left:15px;">Login</label>
+      </div>
+      <form class="form">
+        <div class="form-group inputs">
+          <label class="form-label" style="margin-left:15px;">Email Address</label>
+          <div class="col-sm-12">
+            <input placeholder="example@gmail.com" class="lowercase" type="email" id="email" name="email" #emailid="ngModel" [(ngModel)]="email" email>
+          </div>
+          <div class="col-md-12 error" *ngIf="!emailid.valid && emailid.touched">Invalid Email</div>
+          </div>
+          <div class="form-group inputs" >
+          <label class="form-label" style="margin-left:15px;">Password</label>
+          <div class="col-sm-12">
+            <input [type]="type"  placeholder="password" class="Field lowercase" [(ngModel)]="password" id="pwd" name="passowrd" id="ssn" required
+              autocomplete="new-password" />
+           <!-- <span *ngIf="show" class="float-right span-adjust">
+              <a (click)="toggleShow($event)">HIDE</a>
+            </span>
+            <span *ngIf="!show" class="float-right span-adjust">
+              <a (click)="toggleShow($event)">SHOW</a>
+            </span>-->
+            <div class="label-text Doh-I-forgot-my-pas">
+              <a href="/forgot-password"> <u>Doh! I forgot my passowrd</u></a>
+            </div>
+            <div class="login-button">
+            <button class="form-control btn btn primary" style="background:rgb(73, 132, 241);color:white; font-weight: bold;border-radius: 20px;" (click)="applicantLogin()">Sign In</button>
+          </div>
+          </div>
+          </div>
+          <div class="col-md-12 error" *ngIf="ssnInvalid==true">
+            <b>{{ssnMessage}}</b>
+          </div>
+    
+      </form>
+    
+    </div>
+  
+    
+  
+      
+  </div>
+  </div>

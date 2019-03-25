@@ -1,0 +1,112 @@
+
+.login-header{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    padding: 50px;
+}
+.login-box{
+    
+      padding: 45px;
+      /* margin: 0 auto 100px; */
+
+   }
+   .login-box-col{
+    background-color: white;
+    padding:45px 0px;
+    border-radius:16px;
+        /* margin-bottom:50px; */
+   }
+
+
+
+.login-button{
+    padding-top: 20px;
+    border-radius: 28px;
+   
+}
+
+.label-text{
+    text-align: center; 
+    color:#3b87da;
+    padding-top: 10px;
+   }
+ .span-adjust{
+        margin-top: -40px;
+        margin-right: 8px;
+    }
+
+    .Login-new {
+        width: 67px;
+        height: 32px;
+        font-size: 24px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.33;
+        letter-spacing: normal;
+        color: #111620;
+      }
+
+      .Doh-I-forgot-my-pas {
+       
+        height: 24px;
+        font-family: SFProText;
+        font-size: 16px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: right;
+        color: #1f6efe;
+      }
+
+   
+
+      .Vetty-Profile {
+        
+        font-family: SourceSansPro-It;
+        font-size: 56px;
+        font-weight: 900;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.14;
+        letter-spacing: normal;
+        color: #1f6efe;
+        text-align:left;
+      }
+      .Your-Vetty-Profile-l {
+        
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        color: #111620;
+        text-align:left;
+      }
+
+      @media(max-width: 480px) {
+        .login-box{
+            background-color: white;
+            padding:10px;
+            margin:0px;
+            border-radius:15px;
+            /* width: auto; */
+        }
+        .login-box-col{
+            padding:25px 0px;    
+        }
+        .Vetty-Profile{
+            font-size:35px;
+        }
+        
+        .login-header{
+            padding:50px 10px; 
+        }
+        
+    } 
+
+  
